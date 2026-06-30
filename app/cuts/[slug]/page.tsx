@@ -107,7 +107,7 @@ export default async function CutDetailPage({
               <span className="text-[#241B16]/35">, {steak.code}</span>
             </h1>
 
-            <p className="mt-3 font-[var(--font-serif)] text-base italic text-[#241B16]/55">{steak.sub}</p>
+            <p className="mt-3 font-[var(--font-serif)] text-base text-[#241B16]/55">{steak.sub}</p>
 
             <p className="mt-6 text-[15px] leading-relaxed text-[#241B16]/75">{steak.description}</p>
 
@@ -188,7 +188,7 @@ export default async function CutDetailPage({
             <div className="mt-7 border-t border-[#241B16]/10 pt-6">
               <h3 className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#241B16]/70">Supplied to</h3>
               <p className="mt-2 text-[14px] text-[#241B16]/80">{SUPPLY_CHANNELS.join(" · ")}</p>
-              <p className="mt-4 font-[var(--font-serif)] text-[13px] italic leading-relaxed text-[#241B16]/55">
+              <p className="mt-4 font-[var(--font-serif)] text-[13px] leading-relaxed text-[#241B16]/55">
                 Cut and packed to your specification at Saqr&apos;s own butchery in Doha —
                 sourced, Halal-slaughtered and prepared to order.
               </p>
@@ -226,7 +226,7 @@ export default async function CutDetailPage({
                   <h4 className="font-[var(--font-display)] text-sm font-bold uppercase tracking-[0.08em] text-[#241B16] transition-colors group-hover:text-[#8A1538]">
                     {s.name}
                   </h4>
-                  <p className="mt-1 font-[var(--font-serif)] text-[12px] italic text-[#241B16]/55">{s.sub}</p>
+                  <p className="mt-1 font-[var(--font-serif)] text-[12px] text-[#241B16]/55">{s.sub}</p>
                   <span className="mt-2 inline-block text-[9px] font-bold uppercase tracking-[0.2em] text-[#B7A98E]">
                     {s.code}
                   </span>

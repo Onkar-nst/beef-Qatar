@@ -126,7 +126,7 @@ export default function BeefCutsHero() {
           </h1>
 
           {/* Description */}
-          <p className="text-base sm:text-lg text-[#8a8077] font-[var(--font-serif)] italic leading-relaxed max-w-lg">
+          <p className="text-base sm:text-lg text-[#8a8077] font-[var(--font-serif)] leading-relaxed max-w-lg">
             We honor the heritage of the Aberdeen Angus, nurturing our cattle on pristine pastures and finishing them on a premium diet. The result is unparalleled marbling, remarkable juiciness, and a dining experience reserved for the true connoisseur.
           </p>
 
@@ -175,7 +175,7 @@ export default function BeefCutsHero() {
           {/* Highly visible instructional text directly under the cow. Hides when clicked. */}
           {!selectedCut && (
             <div className="mt-8 bg-white border border-[#2c2623]/10 shadow-sm rounded-xl p-5 max-w-md text-center animate-in fade-in duration-500 z-20">
-              <p className="text-sm text-[#8a8077] font-[var(--font-serif)] italic leading-relaxed">
+              <p className="text-sm text-[#8a8077] font-[var(--font-serif)] leading-relaxed">
                 <strong className="not-italic text-[#191851] font-sans font-bold uppercase tracking-widest text-[11px] block mb-2">
                   Select a primal cut
                 </strong> 
@@ -236,14 +236,14 @@ export default function BeefCutsHero() {
                       <span className="text-[10px] sm:text-xs font-bold tracking-widest text-neutral-200 uppercase line-clamp-2">
                         {item.name}
                       </span>
-                      <span className="text-[9px] sm:text-[11px] text-neutral-500 mt-1.5 font-[var(--font-serif)] italic">
+                      <span className="text-[9px] sm:text-[11px] text-neutral-500 mt-1.5 font-[var(--font-serif)]">
                         {item.sub}
                       </span>
                     </div>
                   ))}
                 </div>
               ) : (
-                <div className="text-center text-neutral-500 py-8 font-[var(--font-serif)] italic text-sm border border-dashed border-neutral-800 rounded-lg">
+                <div className="text-center text-neutral-500 py-8 font-[var(--font-serif)] text-sm border border-dashed border-neutral-800 rounded-lg">
                   Specific retail cuts coming soon...
                 </div>
               )}

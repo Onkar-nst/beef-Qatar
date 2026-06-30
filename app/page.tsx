@@ -61,7 +61,7 @@ export default function Home() {
             src="/cow-bg-hero.png"
             alt=""
             draggable={false}
-            className="absolute inset-x-0 bottom-0 w-full h-full object-cover object-bottom opacity-80"
+            className="absolute inset-x-0 bottom-0 w-full h-full object-cover object-bottom opacity-100"
           />
           {/* warm golden wash — echoes the desert gold of the Saqr emblem */}
           <div
@@ -99,12 +99,10 @@ export default function Home() {
             <div>
               <span className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.35em] text-[#E0C074]">
                 The Saqr Promise
-                <span className="text-[#FAF6EF]/35">·</span>
-                <span className="font-[var(--font-serif)] text-base tracking-normal">وعد صقر</span>
               </span>
               <p className="mt-7 font-[var(--font-display)] text-[2rem] font-medium leading-[1.16] sm:text-[2.8rem] sm:leading-[1.12]">
                 One standard. One promise. From trusted farms to your table,{" "}
-                <span className="font-[var(--font-serif)] italic text-[#E0C074]">every cut is certified Halal.</span>
+                <span className="font-[var(--font-serif)] text-[#E0C074]">every cut is certified Halal.</span>
               </p>
               <p className="mt-8 max-w-xl text-[14.5px] leading-relaxed text-[#FAF6EF]/70">
                 Saqr brings Qatar a new standard in premium meat — 100% Halal-certified beef
@@ -157,29 +155,15 @@ export default function Home() {
                 uncompromising standard.
               </p>
             </div>
-
-            {/* stat strip */}
-            <div className="mt-9 grid grid-cols-3 gap-px overflow-hidden rounded-xl border border-[#8A1538]/15 bg-[#8A1538]/15">
-              {[
-                { k: "100%", v: "Halal certified" },
-                { k: "5", v: "Steps we own" },
-                { k: "Doha", v: "Same-day delivery" },
-              ].map((s) => (
-                <div key={s.k} className="bg-[#FAF6EF] px-3 py-5 text-center">
-                  <div className="font-[var(--font-display)] text-2xl font-bold text-[#8A1538] md:text-3xl">{s.k}</div>
-                  <div className="mt-1 text-[10px] font-bold uppercase tracking-[0.15em] text-[#241B16]/55">{s.v}</div>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* RIGHT — rectangular image with an offset gold frame */}
-          <div className="reveal relative">
+          <div className="reveal relative mx-auto w-full max-w-[300px] lg:mx-0 lg:ml-auto lg:max-w-[340px]">
             <div aria-hidden className="absolute -right-3 -top-3 bottom-6 left-6 rounded-sm border border-[#C9A24B]/60" />
             <div className="relative overflow-hidden rounded-sm shadow-[0_30px_60px_-30px_rgba(36,27,22,0.55)]">
               <img
-                src="/images/angus-cattle.jpg"
-                alt="Premium Angus cattle on open pasture"
+                src="/cowsection.jpg"
+                alt="Saqr premium Halal cattle"
                 loading="lazy"
                 className="aspect-[4/5] w-full object-cover"
               />
@@ -384,11 +368,11 @@ export default function Home() {
       </section>
 
       {/* CONTACTS */}
-      <section id="contact" className="relative z-10 overflow-hidden bg-[#241B16] text-[#FAF6EF] scroll-mt-0">
-        {/* subtle navy glow for depth */}
+      <section id="contact" className="relative z-10 overflow-hidden bg-[#8A1538] text-[#FAF6EF] scroll-mt-0">
+        {/* subtle gold glow + maroon depth */}
         <div
           className="pointer-events-none absolute inset-0"
-          style={{ background: "radial-gradient(circle at 85% 10%, rgba(138,21,56,0.12), transparent 55%)" }}
+          style={{ background: "radial-gradient(circle at 85% 8%, rgba(201,162,75,0.14), transparent 52%), radial-gradient(circle at 0% 100%, rgba(110,15,44,0.55), transparent 55%)" }}
         />
         <div className="relative mx-auto grid max-w-6xl items-start gap-14 px-6 py-20 sm:py-24 lg:grid-cols-[1fr_1.05fr] lg:gap-20">
           {/* LEFT — intro + details + socials */}
@@ -409,7 +393,7 @@ export default function Home() {
             {/* contact detail cards */}
             <div className="mt-8 space-y-3">
               {[
-                { label: "Showroom & Butchery", value: "Salwa Road, Doha\nState of Qatar", icon: <MapPinIcon /> },
+                { label: "Showroom & Butchery", value: "Salwa Road, Doha, State of Qatar", icon: <MapPinIcon /> },
                 { label: "WhatsApp & Phone", value: "+974 4000 1234", href: "https://wa.me/97440001234", icon: <PhoneIcon /> },
                 { label: "Email", value: "enquiries@saqr.qa", href: "mailto:enquiries@saqr.qa", icon: <MailIcon /> },
                 { label: "Business Hours", value: "Sun–Thu · 8:00–20:00 AST", icon: <ClockIcon /> },
@@ -565,19 +549,19 @@ function ContactForm() {
   return (
     <form onSubmit={onSubmit} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm sm:p-8">
       <h4 className="font-[var(--font-display)] text-xl font-bold uppercase tracking-wide text-[#FAF6EF]">Send us a message</h4>
-      <p className="mt-1.5 font-[var(--font-serif)] text-[13px] italic text-[#FAF6EF]/55">
+      <p className="mt-1.5 font-[var(--font-serif)] text-[13px] text-[#FAF6EF]/55">
         We typically reply within one business day.
       </p>
 
       <div className="mt-6 space-y-4">
         <div>
           <label className={label} htmlFor="cf-name">Full Name</label>
-          <input id="cf-name" name="name" required placeholder="Jane Smith" className={field} />
+          <input id="cf-name" name="name" required placeholder="Ahmed Al-Thani" className={field} />
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
             <label className={label} htmlFor="cf-email">Email</label>
-            <input id="cf-email" name="email" type="email" required placeholder="jane@company.com" className={field} />
+            <input id="cf-email" name="email" type="email" required placeholder="ahmed@company.qa" className={field} />
           </div>
           <div>
             <label className={label} htmlFor="cf-company">Company <span className="text-[#FAF6EF]/25">(optional)</span></label>
@@ -602,7 +586,7 @@ function ContactForm() {
 
       <button
         type="submit"
-        className="group relative mt-6 inline-flex w-full items-center justify-center overflow-hidden rounded-md bg-[#8A1538] px-8 py-3.5 text-[11px] font-bold uppercase tracking-[0.2em] text-white transition-opacity hover:opacity-95"
+        className="group relative mt-6 inline-flex w-full items-center justify-center overflow-hidden rounded-md bg-[#C9A24B] px-8 py-3.5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#6E0F2C] transition-opacity hover:opacity-90"
       >
         <span className="relative flex items-center gap-2">
           Send Message
