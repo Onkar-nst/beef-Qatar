@@ -1,7 +1,6 @@
 import { COW_VIEWBOX, PRIMAL_POLYS } from "@/lib/cuts";
 
-/* A small, static cow diagram with one primal region highlighted in navy —
-   the wayfinding cue on each cut-detail page. */
+/* A small, static cow diagram with one primal region highlighted in navy,    the wayfinding cue on each cut-detail page. */
 export default function CowMini({
   active,
   className = "",

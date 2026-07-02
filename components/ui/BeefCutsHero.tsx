@@ -153,7 +153,7 @@ export default function BeefCutsHero() {
               draggable={false}
             />
 
-            {/* SVG overlay — hand-traced polygons */}
+            {/* SVG overlay, hand-traced polygons */}
             <svg
               viewBox="0 0 1017 619"
               className="absolute inset-0 w-full h-full z-20"

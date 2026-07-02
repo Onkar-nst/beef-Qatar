@@ -35,8 +35,8 @@ export const PRIMALS: Record<string, Primal> = {
       { name: "RUMP ROAST", sub: "(Bottom Half)", img: "/images/steak-board.jpg", code: "Rump · 2091", description: "A lean, full-flavoured roasting cut from the hindquarter. Best taken to medium-rare and rested, then carved thin across the grain for tender, satisfying slices.", methods: ["roast", "grill"] },
       { name: "NEW YORK STRIP", sub: "(Strip Loin)", img: "/images/steak-sliced.jpg", code: "Striploin · 2140", description: "Firm-textured and richly marbled with a defined fat cap that renders to crisp, savoury edges. A steakhouse classic that rewards a hot, fast sear.", methods: ["grill", "pan"] },
       { name: "PORTERHOUSE", sub: "(Short Loin)", img: "/images/steak-small.jpg", code: "Striploin · 2140", description: "The strip loin steak cut thick and on the bone. Balanced marbling and a clean, beefy character make it a confident choice for the grill.", methods: ["grill", "pan", "roast"] },
-      { name: "FILET MIGNON", sub: "(Tenderloin)", img: "/images/ribeye.jpg", code: "Tenderloin · 2150", description: "The most tender cut on the animal — buttery, fine-grained and mild. Sear hard for a caramelised crust while keeping the centre blushing and soft.", methods: ["pan", "grill", "roast"] },
-      { name: "FLANKEN RIBS", sub: "(Short Ribs)", img: "/images/steak-board.jpg", code: "Short Rib · 2470", description: "Short ribs cut thin across the bones. Quick over fierce heat or slow-braised until the meat falls away — either way, intensely savoury and rich.", methods: ["grill", "braise"] },
+      { name: "FILET MIGNON", sub: "(Tenderloin)", img: "/images/ribeye.jpg", code: "Tenderloin · 2150", description: "The most tender cut on the animal, buttery, fine-grained and mild. Sear hard for a caramelised crust while keeping the centre blushing and soft.", methods: ["pan", "grill", "roast"] },
+      { name: "FLANKEN RIBS", sub: "(Short Ribs)", img: "/images/steak-board.jpg", code: "Short Rib · 2470", description: "Short ribs cut thin across the bones. Quick over fierce heat or slow-braised until the meat falls away, either way, intensely savoury and rich.", methods: ["grill", "braise"] },
       { name: "TOMAHAWK", sub: "(Long Bone Ribeye)", img: "/images/steak-sliced.jpg", code: "OP Rib · 2090", description: "A ribeye with the entire rib bone frenched into a long handle. Showpiece marbling and an unmistakable silhouette, built for slow roasting then a finishing sear.", methods: ["roast", "grill"] },
     ],
   },
@@ -46,8 +46,8 @@ export const PRIMALS: Record<string, Primal> = {
     label: "Rib",
     items: [
       { name: "RIBEYE STEAK", sub: "(Prime Rib)", img: "/images/ribeye.jpg", code: "Cube Roll · 2090", description: "Cut from the rib primal, the ribeye is prized for its abundant marbling and the soft cap of fat that frames the eye. As it cooks, that fat renders through the muscle for a juicy, full-bodied flavour that defines premium Halal beef.", methods: ["grill", "pan", "roast"] },
-      { name: "BACK RIBS", sub: "(Beef Ribs)", img: "/images/steak-board.jpg", code: "Rib Prepared · 2335", description: "The meat between the rib bones — lean, flavourful and made for low, slow cooking. Smoke or roast until tender and the connective tissue melts into the meat.", methods: ["roast", "braise"] },
-      { name: "BEEF MINCE", sub: "(Trim)", img: "/images/beef-mince.jpg", code: "Trim Mince · 2580", description: "Coarse-ground from the lean trim left after the rib is portioned, so nothing premium is wasted. A clean, all-purpose mince with a true beefy flavour — brown it hard for ragù and bolognese, or pack it into burgers, meatballs and koftas.", methods: ["pan", "braise"] },
+      { name: "BACK RIBS", sub: "(Beef Ribs)", img: "/images/steak-board.jpg", code: "Rib Prepared · 2335", description: "The meat between the rib bones, lean, flavourful and made for low, slow cooking. Smoke or roast until tender and the connective tissue melts into the meat.", methods: ["roast", "braise"] },
+      { name: "BEEF MINCE", sub: "(Trim)", img: "/images/beef-mince.jpg", code: "Trim Mince · 2580", description: "Coarse-ground from the lean trim left after the rib is portioned, so nothing premium is wasted. A clean, all-purpose mince with a true beefy flavour, brown it hard for ragù and bolognese, or pack it into burgers, meatballs and koftas.", methods: ["pan", "braise"] },
     ],
   },
   short_loin: {
@@ -55,7 +55,7 @@ export const PRIMALS: Record<string, Primal> = {
     title: "SHORT LOIN CUTS",
     label: "Short Loin",
     items: [
-      { name: "PORTERHOUSE", sub: "(Thick Cut)", img: "/images/steak-small.jpg", code: "Short Loin · 2120", description: "A T-bone with a larger portion of tenderloin. Two textures from one steak — the firm strip on one side, the silky fillet on the other — both at their best cooked over coals.", methods: ["grill", "pan"] },
+      { name: "PORTERHOUSE", sub: "(Thick Cut)", img: "/images/steak-small.jpg", code: "Short Loin · 2120", description: "A T-bone with a larger portion of tenderloin. Two textures from one steak, the firm strip on one side, the silky fillet on the other, both at their best cooked over coals.", methods: ["grill", "pan"] },
       { name: "T-BONE", sub: "(Classic Cut)", img: "/images/steak-board.jpg", code: "Short Loin · 2138", description: "Named for the T-shaped bone that separates two prized muscles: tender fillet and robust strip loin. A grilling icon with bold, honest beef flavour.", methods: ["grill", "pan"] },
     ],
   },
@@ -64,7 +64,7 @@ export const PRIMALS: Record<string, Primal> = {
     title: "SIRLOIN CUTS",
     label: "Sirloin",
     items: [
-      { name: "TOP SIRLOIN", sub: "(Lean Steak)", img: "/images/steak-sliced.jpg", code: "Rump · 2091", description: "Lean and boldly flavoured with a satisfying chew. Versatile and forgiving — excellent grilled whole or sliced for the pan.", methods: ["grill", "pan", "roast"] },
+      { name: "TOP SIRLOIN", sub: "(Lean Steak)", img: "/images/steak-sliced.jpg", code: "Rump · 2091", description: "Lean and boldly flavoured with a satisfying chew. Versatile and forgiving, excellent grilled whole or sliced for the pan.", methods: ["grill", "pan", "roast"] },
       { name: "TRI-TIP", sub: "(Roast)", img: "/images/ribeye.jpg", code: "Tri-Tip · 2120", description: "A triangular muscle from the bottom sirloin, rich and beefy with a loose grain. Roast or grill to medium-rare, then slice across the changing grain to keep every piece tender.", methods: ["roast", "grill"] },
     ],
   },
@@ -74,7 +74,7 @@ export const PRIMALS: Record<string, Primal> = {
     label: "Round",
     items: [
       { name: "EYE OF ROUND", sub: "(Roast)", img: "/images/steak-board.jpg", code: "Eye Round · 2040", description: "A very lean, even-grained cut from the hindquarter. Best slow-roasted to medium-rare and carved paper-thin, or cured for cold cuts.", methods: ["roast", "braise"] },
-      { name: "BOTTOM ROUND", sub: "(Roast)", img: "/images/steak-small.jpg", code: "Silverside · 2020", description: "A lean, economical roasting cut with a clean flavour. Rewards gentle, moist cooking — braise or pot-roast until fork-tender.", methods: ["braise", "roast"] },
+      { name: "BOTTOM ROUND", sub: "(Roast)", img: "/images/steak-small.jpg", code: "Silverside · 2020", description: "A lean, economical roasting cut with a clean flavour. Rewards gentle, moist cooking, braise or pot-roast until fork-tender.", methods: ["braise", "roast"] },
     ],
   },
   brisket: {
@@ -82,8 +82,8 @@ export const PRIMALS: Record<string, Primal> = {
     title: "BRISKET",
     label: "Brisket",
     items: [
-      { name: "BRISKET FLAT", sub: "(Lean)", img: "/images/ribeye.jpg", code: "Brisket · 2320", description: "The leaner half of the brisket, with a uniform shape that slices cleanly. Made for the long haul — smoke or braise low and slow until the collagen turns silken.", methods: ["braise", "roast"] },
-      { name: "BRISKET POINT", sub: "(Fatty)", img: "/images/steak-sliced.jpg", code: "Brisket · 2321", description: "The richer, fattier half — heavily marbled and forgiving over long cooks. Renders into deeply savoury, melting meat that's perfect for burnt ends.", methods: ["braise", "roast"] },
+      { name: "BRISKET FLAT", sub: "(Lean)", img: "/images/ribeye.jpg", code: "Brisket · 2320", description: "The leaner half of the brisket, with a uniform shape that slices cleanly. Made for the long haul, smoke or braise low and slow until the collagen turns silken.", methods: ["braise", "roast"] },
+      { name: "BRISKET POINT", sub: "(Fatty)", img: "/images/steak-sliced.jpg", code: "Brisket · 2321", description: "The richer, fattier half, heavily marbled and forgiving over long cooks. Renders into deeply savoury, melting meat that's perfect for burnt ends.", methods: ["braise", "roast"] },
     ],
   },
   plate: {
@@ -91,8 +91,8 @@ export const PRIMALS: Record<string, Primal> = {
     title: "SHORT PLATE",
     label: "Plate",
     items: [
-      { name: "SKIRT STEAK", sub: "(Fajita Cut)", img: "/images/steak-sliced.jpg", code: "Skirt · 2210", description: "A long, loose-grained cut packed with flavour. Marinate, sear hot and fast, then slice thin across the grain — the classic choice for fajitas and tacos.", methods: ["grill", "pan"] },
-      { name: "SHORT RIBS", sub: "(Braising)", img: "/images/steak-board.jpg", code: "Short Rib · 2470", description: "Thick, meaty ribs laid over the bone. Built for braising — hours of gentle heat coax out a glossy, fall-apart richness.", methods: ["braise", "roast"] },
+      { name: "SKIRT STEAK", sub: "(Fajita Cut)", img: "/images/steak-sliced.jpg", code: "Skirt · 2210", description: "A long, loose-grained cut packed with flavour. Marinate, sear hot and fast, then slice thin across the grain, the classic choice for fajitas and tacos.", methods: ["grill", "pan"] },
+      { name: "SHORT RIBS", sub: "(Braising)", img: "/images/steak-board.jpg", code: "Short Rib · 2470", description: "Thick, meaty ribs laid over the bone. Built for braising, hours of gentle heat coax out a glossy, fall-apart richness.", methods: ["braise", "roast"] },
     ],
   },
   flank: {
@@ -108,7 +108,7 @@ export const PRIMALS: Record<string, Primal> = {
     title: "SHANK",
     label: "Shank",
     items: [
-      { name: "BEEF SHANK", sub: "(Osso Buco)", img: "/images/steak-small.jpg", code: "Shin · 2360", description: "A hard-working cut threaded with connective tissue and marrow. Braise slowly and it transforms — meltingly tender meat in a glossy, gelatin-rich sauce.", methods: ["braise"] },
+      { name: "BEEF SHANK", sub: "(Osso Buco)", img: "/images/steak-small.jpg", code: "Shin · 2360", description: "A hard-working cut threaded with connective tissue and marrow. Braise slowly and it transforms, meltingly tender meat in a glossy, gelatin-rich sauce.", methods: ["braise"] },
     ],
   },
 };
@@ -160,14 +160,14 @@ export const COOK_LABELS: Record<CookMethod, string> = {
 };
 
 /* ------------------------------------------------------------------ */
-/*  Product specifications — Saqr supplies premium Halal cuts, so each  */
+/*  Product specifications, Saqr supplies premium Halal cuts, so each  */
 /*  cut page reads as a wholesale/retail spec sheet (formats,           */
 /*  packaging, grade, Halal) rather than a consumer recipe.            */
 /* ------------------------------------------------------------------ */
 export type Spec = { label: string; value: string };
 
 /** Pulls the cut-code number out of a code string like "Cube Roll · 2090". */
-export const ausMeatNo = (code: string) => code.split("·").pop()?.trim() ?? "—";
+export const ausMeatNo = (code: string) => code.split("·").pop()?.trim() ?? ", ";
 
 export function specsFor(primal: Primal, steak: Steak): Spec[] {
   return [
@@ -178,7 +178,7 @@ export function specsFor(primal: Primal, steak: Steak): Spec[] {
   ];
 }
 
-/** Available chilled/frozen formats — offered across the Saqr range. */
+/** Available chilled/frozen formats, offered across the Saqr range. */
 export const PRODUCT_FORMATS = ["Chilled", "Frozen"];
 
 /** Retail-ready & bulk packaging options from Saqr's butchery. */
@@ -192,7 +192,7 @@ export const PACKAGING = [
 /** Channels Saqr supplies this product into. */
 export const SUPPLY_CHANNELS = ["Retail", "Hotels & Restaurants", "Wholesale"];
 
-/** Other cuts to surface at the foot of a cut page — same primal first. */
+/** Other cuts to surface at the foot of a cut page, same primal first. */
 export function relatedCuts(
   primalId: string,
   excludeName: string,

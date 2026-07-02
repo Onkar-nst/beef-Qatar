@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-/* Saqr falcon mark — reused in the logo lockup. */
+/* Saqr falcon mark, reused in the logo lockup. */
 function FalconMark({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 100 68" className={className} aria-hidden="true">
@@ -40,9 +40,9 @@ export default function Navbar() {
       <div className="hidden md:block w-full bg-[#8A1538] text-[#E0C074]">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-1.5 text-[10px] font-semibold uppercase tracking-[0.25em]">
           <span className="flex items-center gap-2">
-            <span className="text-[#FAF6EF]">✦</span> Certified Halal · ذبيحة
+            <span className="text-[#FAF6EF]">✦</span> Certified Halal 
           </span>
-          <span className="text-[#FAF6EF]/85 tracking-[0.3em]">صقر · Premium Meats of Qatar</span>
+          <span className="text-[#FAF6EF]/85 tracking-[0.3em]"> · Premium Meats of Qatar</span>
           <span>Delivery across Qatar · +974 4000 1234</span>
         </div>
       </div>
@@ -57,7 +57,7 @@ export default function Navbar() {
         }
       >
         <div className="mx-auto flex items-center justify-between px-6 h-20 max-w-7xl gap-4">
-          {/* LEFT — logo lockup */}
+          {/* LEFT, logo lockup */}
           <Link href="/" className="group flex items-center gap-3">
             <span className="grid h-12 w-12 place-items-center rounded-full bg-[#FAF6EF] ring-1 ring-[#8A1538]/20 shadow-sm transition-transform duration-300 group-hover:scale-105">
               <FalconMark className="h-7 w-7" />
@@ -66,14 +66,10 @@ export default function Navbar() {
               <span className="font-[var(--font-display)] text-[1.6rem] font-bold tracking-[0.16em] text-[#8A1538]">
                 SAQR
               </span>
-              <span className="mt-1 flex items-center gap-2 text-[8.5px] font-bold uppercase tracking-[0.34em] text-[#241B16]/55">
-                Premium Meats
-                <span className="font-[var(--font-serif)] text-[11px] tracking-normal text-[#C9A24B]">صقر</span>
-              </span>
             </span>
           </Link>
 
-          {/* CENTER — links */}
+          {/* CENTER, links */}
           <nav className="hidden lg:flex items-center gap-9 text-[11px] uppercase tracking-[0.22em] text-[#241B16] font-semibold">
             {links.map((l) => (
               <Link
@@ -86,7 +82,7 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* RIGHT — WhatsApp CTA */}
+          {/* RIGHT, WhatsApp CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
               href={WHATSAPP}

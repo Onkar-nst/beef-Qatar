@@ -40,9 +40,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const found = getSteakBySlug(slug);
-  if (!found) return { title: "Cut not found — Saqr" };
+  if (!found) return { title: "Cut not found, Saqr" };
   return {
-    title: `${found.steak.name} — Saqr`,
+    title: `${found.steak.name}, Saqr`,
     description: found.steak.description,
   };
 }
@@ -95,7 +95,7 @@ export default async function CutDetailPage({
 
         {/* ── Cut identity + product specification ── */}
         <div className="relative mt-14 grid gap-12 lg:mt-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
-          {/* LEFT — identity, description, key specs, actions */}
+          {/* LEFT, identity, description, key specs, actions */}
           <div>
             <div className="mb-6 flex items-center gap-3">
               <span className="h-px w-16 border-t-2 border-dashed border-[#241B16]/40" />
@@ -144,7 +144,7 @@ export default async function CutDetailPage({
             </div>
           </div>
 
-          {/* RIGHT — product specification card */}
+          {/* RIGHT, product specification card */}
           <div className="rounded-2xl bg-white/60 p-7 ring-1 ring-[#241B16]/10 sm:p-8 lg:p-9">
             <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#8A1538]">
               Product Specification
@@ -189,8 +189,7 @@ export default async function CutDetailPage({
               <h3 className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#241B16]/70">Supplied to</h3>
               <p className="mt-2 text-[14px] text-[#241B16]/80">{SUPPLY_CHANNELS.join(" · ")}</p>
               <p className="mt-4 font-[var(--font-serif)] text-[13px] leading-relaxed text-[#241B16]/55">
-                Cut and packed to your specification at Saqr&apos;s own facility in Doha —
-                sourced, Halal-slaughtered and prepared to order.
+                Cut and packed to your specification at Saqr&apos;s own facility in Doha,                 sourced, Halal-slaughtered and prepared to order.
               </p>
             </div>
           </div>

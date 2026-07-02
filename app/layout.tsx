@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Lora, Inter } from "next/font/google";
 import "./globals.css";
 
-// Display — premium editorial serif (replaces the old condensed sans)
+// Display, premium editorial serif (replaces the old condensed sans)
 const fraunces = Fraunces({
   variable: "--font-display",
   subsets: ["latin"],
@@ -24,18 +24,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Saqr — Premium Halal Meats of Qatar",
+  title: "Saqr, Premium Halal Meats of Qatar",
   description:
-    "Saqr (صقر) — premium, 100% Halal-certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    "Saqr, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
   icons: {
     icon: "/images/saqr-emblem.svg",
     shortcut: "/images/saqr-emblem.svg",
     apple: "/images/saqr-emblem.svg",
   },
   openGraph: {
-    title: "Saqr — Premium Halal Meats",
+    title: "Saqr, Premium Halal Meats",
     description:
-      "Premium, 100% Halal-certified beef and lamb for Qatar — source to table.",
+      "Premium, 100% Halal certified beef and lamb for Qatar, source to table.",
     type: "website",
   },
 };

@@ -9,7 +9,7 @@ import { PRIMALS } from "@/lib/cuts";
 const CUTS_DETAILS = PRIMALS;
 
 /* ------------------------------------------------------------------ */
-/*  Assembly pieces — each primal region is a clipped slice of the     */
+/*  Assembly pieces, each primal region is a clipped slice of the     */
 /*  diagram that flies in from a different edge of the screen.         */
 /* ------------------------------------------------------------------ */
 const CUT_POLYS: Record<string, string> = {
@@ -273,19 +273,19 @@ export default function BeefCutsHeroCentered() {
 
       {/* ─── Main Stage ─── */}
       <div className="relative w-full max-w-7xl mx-auto px-6 z-10">
-        {/* Two columns — cow on the left, headline + prompt on the right */}
+        {/* Two columns, cow on the left, headline + prompt on the right */}
         <div className="grid lg:grid-cols-2 items-center gap-8 lg:gap-14">
 
           {/* ── Left: Cow Diagram ── */}
           <div className="relative w-full flex items-center justify-center order-2 lg:order-1">
-            {/* Circular backdrop — centered behind the cow, aligned with the logo */}
+            {/* Circular backdrop, centered behind the cow, aligned with the logo */}
             <div
               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 aspect-square w-[280px] rounded-full bg-[#EFE6D6]
                          sm:w-[460px] lg:w-[540px]"
               style={{ transition: "all 0.6s cubic-bezier(.4,0,.2,1)" }}
             />
 
-            {/* Mobile-only floating knife + guide arrow — sits top-right beside the
+            {/* Mobile-only floating knife + guide arrow, sits top-right beside the
                 title; the knife bobs up/down and the arrow points down at the cow. */}
             {!selectedCut && (
               <div className="pointer-events-none absolute right-0 -top-6 z-30 flex flex-col items-end lg:hidden">
@@ -346,7 +346,7 @@ export default function BeefCutsHeroCentered() {
                   ))}
                 </defs>
 
-                {/* full cow — covers head & legs, fades in as pieces settle */}
+                {/* full cow, covers head & legs, fades in as pieces settle */}
                 <image
                   href="/images/newcow.png"
                   width="1378"
@@ -386,7 +386,7 @@ export default function BeefCutsHeroCentered() {
                 })}
               </svg>
 
-              {/* Interactive overlay — hover / click primals */}
+              {/* Interactive overlay, hover / click primals */}
               <svg
                 viewBox="0 0 1378 1142"
                 className="absolute inset-0 w-full h-full z-20"
@@ -412,7 +412,7 @@ export default function BeefCutsHeroCentered() {
             <h2 className="font-[var(--font-display)] font-semibold uppercase tracking-[0.04em] leading-[1.1] text-[#241B16]/85 text-[clamp(2rem,3.6vw,3.6rem)] [text-shadow:0_1px_2px_rgba(250,246,239,0.6)]">
               Qatar&apos;s House of <span className="text-[#8A1538]">Premium Halal</span><br />Beef &amp; Lamb
             </h2>
-            {/* Desktop prompt — sits beside the title */}
+            {/* Desktop prompt, sits beside the title */}
             <div className="mt-8 hidden lg:block">{renderPrompt("desktop")}</div>
           </div>
         </div>
@@ -454,7 +454,7 @@ export default function BeefCutsHeroCentered() {
                 </button>
               </div>
 
-              {/* Steaks — a single horizontal row. When more cuts exist than fit,
+              {/* Steaks, a single horizontal row. When more cuts exist than fit,
                   an arrow at the end hints "there's more" and scrolls the row. */}
               <div className="relative">
                 <div
@@ -464,7 +464,7 @@ export default function BeefCutsHeroCentered() {
                 >
                   <div className="flex flex-nowrap gap-x-8 min-w-max">
                     {panelDetails.items.map((item, idx) => (
-                      // Product detail pages are disabled for now — render as a
+                      // Product detail pages are disabled for now, render as a
                       // static card (no link, no navigation on click).
                       <div
                         key={idx}
@@ -494,7 +494,7 @@ export default function BeefCutsHeroCentered() {
                   </div>
                 </div>
 
-                {/* Left fade + arrow — appears once scrolled away from the start */}
+                {/* Left fade + arrow, appears once scrolled away from the start */}
                 <div
                   className={`pointer-events-none absolute left-0 top-0 bottom-2 flex items-center justify-start pr-12 bg-gradient-to-r from-[#1A130F] via-[#1A130F]/85 to-transparent transition-opacity duration-300 ${canScrollLeft ? "opacity-100" : "opacity-0"}`}
                 >
@@ -510,7 +510,7 @@ export default function BeefCutsHeroCentered() {
                   </button>
                 </div>
 
-                {/* Right fade + arrow — indicates more cuts are available */}
+                {/* Right fade + arrow, indicates more cuts are available */}
                 <div
                   className={`pointer-events-none absolute right-0 top-0 bottom-2 flex items-center justify-end pl-12 bg-gradient-to-l from-[#1A130F] via-[#1A130F]/85 to-transparent transition-opacity duration-300 ${canScrollRight ? "opacity-100" : "opacity-0"}`}
                 >

@@ -31,7 +31,7 @@ function useReveal() {
 export default function Home() {
   const ref = useReveal();
 
-  // "From Farm to Door" mobile carousel — track which card is in view for the dots.
+  // "From Farm to Door" mobile carousel, track which card is in view for the dots.
   const farmScrollRef = useRef<HTMLDivElement | null>(null);
   const [farmIdx, setFarmIdx] = useState(0);
   const onFarmScroll = () => {
@@ -72,7 +72,7 @@ export default function Home() {
             draggable={false}
             className="absolute inset-x-0 bottom-0 w-full h-full object-cover object-bottom opacity-45"
           />
-          {/* Maroon brand wash — ties the pasture to the Saqr burgundy */}
+          {/* Maroon brand wash, ties the pasture to the Saqr burgundy */}
           <div
             aria-hidden="true"
             className="absolute inset-0 mix-blend-multiply bg-gradient-to-br from-[#8A1538]/35 via-[#9E2447]/22 to-[#6E1230]/45"
@@ -82,7 +82,7 @@ export default function Home() {
             aria-hidden="true"
             className="absolute inset-0 mix-blend-soft-light bg-gradient-to-t from-[#C9A24B]/28 via-transparent to-[#C9A24B]/12"
           />
-          {/* Cream veil — lifts the whole field lighter and more subtle */}
+          {/* Cream veil, lifts the whole field lighter and more subtle */}
           <div aria-hidden="true" className="absolute inset-0 bg-[#FAF6EF]/35" />
           {/* Fade the top into the cream so the nav + title stay clean */}
           <div className="absolute inset-x-0 top-0 h-[26rem] bg-gradient-to-b from-[#FAF6EF] via-[#FAF6EF]/60 to-transparent" />
@@ -94,9 +94,9 @@ export default function Home() {
 
       </div>
 
-      {/* THE SAQR PROMISE — full-bleed maroon manifesto band */}
+      {/* THE SAQR PROMISE, full-bleed maroon manifesto band */}
       <section id="philosophy" className="relative z-10 overflow-hidden bg-[#8A1538] text-[#FAF6EF] scroll-mt-24">
-        {/* giant faint Arabic watermark — sits beside the 3rd pillar on mobile, centered on the band from lg up */}
+        {/* giant faint Arabic watermark, sits beside the 3rd pillar on mobile, centered on the band from lg up */}
         <span aria-hidden className="pointer-events-none absolute -right-[4vw] top-[84%] -translate-y-1/2 select-none font-[var(--font-serif)] text-[34vw] leading-none text-white/[0.05] lg:top-1/2">
           وعد
         </span>
@@ -106,7 +106,7 @@ export default function Home() {
 
         <div className="relative mx-auto max-w-6xl px-6 py-20 sm:py-28">
           <div className="reveal grid gap-12 lg:grid-cols-[1.45fr_1fr] lg:items-center lg:gap-20">
-            {/* LEFT — manifesto quote */}
+            {/* LEFT, manifesto quote */}
             <div>
               <span className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.35em] text-[#E0C074]">
                 The Saqr Promise
@@ -116,13 +116,13 @@ export default function Home() {
                 <span className="font-[var(--font-serif)] text-[#E0C074]">every cut is certified Halal.</span>
               </p>
               <p className="mt-8 max-w-xl text-[14.5px] leading-relaxed text-[#FAF6EF]/70">
-                Saqr brings Qatar a new standard in premium meat — 100% Halal-certified beef
+                Saqr brings Qatar a new standard in premium meat, 100% Halal certified beef
                 and lamb, sourced from trusted farms, slaughtered strictly to Zabiha rites and
                 cut by master butchers here in Doha.
               </p>
             </div>
 
-            {/* RIGHT — numbered promise pillars */}
+            {/* RIGHT, numbered promise pillars */}
             <div className="border-y border-white/15 divide-y divide-white/15">
               {[
                 { n: "01", t: "Halal, always", d: "Zabiha-certified, no exceptions." },
@@ -142,10 +142,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHO WE ARE — editorial split + stat strip + numbered stepper */}
+      {/* WHO WE ARE, editorial split + stat strip + numbered stepper */}
       <section id="about" className="relative z-10 mx-auto max-w-6xl px-6 py-20 sm:py-24 scroll-mt-24">
         <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16">
-          {/* LEFT — content */}
+          {/* LEFT, content */}
           <div className="reveal">
             <div className="flex items-center gap-3">
               <span className="font-[var(--font-display)] text-[13px] font-bold uppercase tracking-[0.4em] text-[#8A1538]">About</span>
@@ -157,8 +157,8 @@ export default function Home() {
             </h2>
             <div className="mt-6 max-w-xl space-y-4 font-[var(--font-serif)] text-[15px] leading-relaxed text-[#241B16]/70">
               <p>
-                <span className="font-semibold text-[#241B16]">Saqr</span> (صقر) supplies 100% Halal-certified beef
-                and lamb to homes, hotels and restaurants across Qatar — sourced with care, cut with craft,
+                <span className="font-semibold text-[#241B16]">Saqr</span> supplies 100% Halal certified beef
+                and lamb to homes, hotels and restaurants across Qatar, sourced with care, cut with craft,
                 delivered with speed.
               </p>
               <p>
@@ -168,7 +168,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* RIGHT — rectangular image with an offset gold frame */}
+          {/* RIGHT, rectangular image with an offset gold frame */}
           <div className="reveal relative mx-auto w-full max-w-[300px] lg:mx-0 lg:ml-auto lg:max-w-[340px]">
             <div aria-hidden className="absolute -right-3 -top-3 bottom-6 left-6 rounded-sm border border-[#C9A24B]/60" />
             <div className="relative overflow-hidden rounded-sm shadow-[0_30px_60px_-30px_rgba(36,27,22,0.55)]">
@@ -187,7 +187,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* process flow — swipeable carousel on mobile, connected grid on lg+ */}
+        {/* process flow, swipeable carousel on mobile, connected grid on lg+ */}
         <div className="reveal mt-16 border-t border-[#8A1538]/15 pt-12">
           <div className="mb-8 flex items-center gap-3">
             <span className="font-[var(--font-display)] text-[12px] font-bold uppercase tracking-[0.4em] text-[#8A1538]">
@@ -235,7 +235,7 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Dots — hint that more cards sit to the right (mobile only) */}
+            {/* Dots, hint that more cards sit to the right (mobile only) */}
             <div className="mt-5 flex justify-center gap-2 sm:hidden">
               {[0, 1, 2, 3, 4].map((d) => (
                 <span
@@ -262,20 +262,20 @@ export default function Home() {
           }}
         />
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 sm:py-24 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-          {/* LEFT — certification seal (desktop only) */}
+          {/* LEFT, certification seal (desktop only) */}
           <div className="reveal hidden lg:flex flex-col items-center">
             <img
               src="/images/halal-seal.svg"
-              alt="Saqr — Certified Halal, Zabiha slaughtered"
+              alt="Saqr, Certified Halal, Zabiha slaughtered"
               loading="lazy"
               className="float-slow w-56 sm:w-64 lg:w-72 drop-shadow-[0_24px_40px_-20px_rgba(138,21,56,0.5)]"
             />
             <span className="mt-6 font-[var(--font-serif)] text-2xl text-[#8A1538]">حلال ١٠٠٪</span>
           </div>
 
-          {/* RIGHT — copy + assurance grid */}
+          {/* RIGHT, copy + assurance grid */}
           <div className="reveal relative">
-            {/* Mobile watermark — small seal behind the title */}
+            {/* Mobile watermark, small seal behind the title */}
             <img
               src="/images/halal-seal.svg"
               alt=""
@@ -292,12 +292,12 @@ export default function Home() {
               </VanishText>
             </h3>
             <p className="max-w-xl font-[var(--font-serif)] text-[14px] leading-relaxed text-gray-600">
-              Every animal is hand-slaughtered to strict Zabiha rites — facing the Qiblah, with the name of Allah pronounced — under qualified Islamic supervision. Nothing leaves our facility without full Halal assurance. It is the first promise of the Saqr name, never an afterthought.
+              Every animal is hand-slaughtered to strict Zabiha rites, facing the Qiblah, with the name of Allah pronounced, under qualified Islamic supervision. Nothing leaves our facility without full Halal assurance. It is the first promise of the Saqr name, never an afterthought.
             </p>
 
             <div className="mt-9 grid gap-4 sm:grid-cols-2">
               {[
-                { t: "Zabiha Slaughter", d: "Hand-slaughtered to Islamic rites — no compromise, no shortcuts." },
+                { t: "Zabiha Slaughter", d: "Hand-slaughtered to Islamic rites, no compromise, no shortcuts." },
                 { t: "Qualified Supervision", d: "Overseen and certified by a recognised Halal authority." },
                 { t: "Full Traceability", d: "Every cut traceable from the source farm to your order." },
                 { t: "Unbroken Cold Chain", d: "Chilled handling end-to-end for guaranteed freshness." },
@@ -319,7 +319,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* QUALITY — full-bleed dark split: content left, edge-bleed image right, metric rows */}
+      {/* QUALITY, full-bleed dark split: content left, edge-bleed image right, metric rows */}
       <section id="quality" className="relative z-10 overflow-hidden bg-[#16100C] text-[#FAF6EF] scroll-mt-0">
         <div
           aria-hidden
@@ -327,7 +327,7 @@ export default function Home() {
           style={{ background: "radial-gradient(circle at 78% 28%, rgba(138,21,56,0.20), transparent 55%)" }}
         />
         <div className="relative grid lg:grid-cols-2">
-          {/* LEFT — content (below the image on mobile) */}
+          {/* LEFT, content (below the image on mobile) */}
           <div className="reveal order-2 flex flex-col justify-center px-6 py-20 sm:py-24 lg:order-1 lg:py-28">
             <div className="mx-auto w-full max-w-xl lg:ml-auto lg:mr-0 lg:max-w-lg lg:pr-14">
               <span className="font-[var(--font-display)] text-[13px] font-bold uppercase tracking-[0.4em] text-[#E0C074]">
@@ -337,7 +337,7 @@ export default function Home() {
                 Marbling you can measure, <span className="text-[#E0C074]">not assume</span>.
               </h2>
               <p className="mt-6 text-[14.5px] leading-relaxed text-[#FAF6EF]/70">
-                Marbling — the fine web of fat within the muscle — is the key to flavour, juiciness and aroma.
+                Marbling, the fine web of fat within the muscle, is the key to flavour, juiciness and aroma.
                 Every Saqr carcass is hand-assessed for marble score and selected against strict premium-grade
                 standards, then handled on an unbroken cold chain from our facility to your door.
               </p>
@@ -359,7 +359,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* RIGHT — image bleeding to the edge (shown first on mobile) */}
+          {/* RIGHT, image bleeding to the edge (shown first on mobile) */}
           <div className="reveal relative order-1 min-h-[320px] lg:order-2 lg:min-h-full">
             <img
               src="/images/steak-board.jpg"
@@ -368,14 +368,14 @@ export default function Home() {
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div aria-hidden className="absolute inset-0 hidden bg-gradient-to-r from-[#16100C] via-transparent to-transparent lg:block" />
-            {/* Mobile — darken from every edge so the image melts into the section */}
+            {/* Mobile, darken from every edge so the image melts into the section */}
             <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#16100C] via-[#16100C]/15 to-[#16100C]/55 lg:hidden" />
             <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-[#16100C]/70 via-transparent to-[#16100C]/70 lg:hidden" />
           </div>
         </div>
       </section>
 
-      {/* SOURCING & PROVENANCE — three-step farm-to-door journey cards */}
+      {/* SOURCING & PROVENANCE, three-step farm-to-door journey cards */}
       <section className="relative z-10 mx-auto max-w-6xl px-6 py-20 sm:py-24">
         <div className="reveal max-w-2xl">
           <div className="flex items-center gap-3">
@@ -384,7 +384,7 @@ export default function Home() {
             <span className="font-[var(--font-serif)] text-[#C9A24B]">المصدر</span>
           </div>
           <h2 className="mt-5 font-[var(--font-display)] text-[2rem] font-semibold leading-[1.12] text-[#241B16] md:text-[2.6rem]">
-            From trusted farm to your door — <span className="text-[#8A1538]">nothing left to chance</span>.
+            From trusted farm to your door, <span className="text-[#8A1538]">nothing left to chance</span>.
           </h2>
         </div>
 
@@ -444,7 +444,7 @@ export default function Home() {
           style={{ background: "radial-gradient(circle at 85% 8%, rgba(201,162,75,0.14), transparent 52%), radial-gradient(circle at 0% 100%, rgba(110,15,44,0.55), transparent 55%)" }}
         />
         <div className="relative mx-auto grid max-w-6xl items-start gap-14 px-6 py-20 sm:py-24 lg:grid-cols-[1fr_1.05fr] lg:gap-20">
-          {/* LEFT — intro + details + socials */}
+          {/* LEFT, intro + details + socials */}
           <div className="reveal">
             <span className="mb-5 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.3em] text-[#C9A24B]">
               <span className="h-px w-6 bg-[#C9A24B]/60" />
@@ -509,7 +509,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* RIGHT — contact form */}
+          {/* RIGHT, contact form */}
           <div className="reveal">
             <ContactForm />
           </div>
@@ -605,7 +605,7 @@ function ContactForm() {
     const company = String(f.get("company") || "");
     const type = String(f.get("type") || "General Enquiry");
     const message = String(f.get("message") || "");
-    const subject = `${type} — ${name || "Website Enquiry"}`;
+    const subject = `${type}, ${name || "Website Enquiry"}`;
     const body = `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nEnquiry: ${type}\n\n${message}`;
     window.location.href = `mailto:enquiries@saqr.qa?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSent(true);
