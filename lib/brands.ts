@@ -43,16 +43,17 @@ export const BRANDS: Record<string, Brand> = {
     phone: "+974 4000 1234",
     whatsapp: "https://wa.me/97450001234?text=Hello%20Saqr%2C%20I%27d%20like%20to%20place%20an%20order.",
   },
-  anmol: {
-    id: "anmol",
-    name: "anmol",
-    displayName: "anmol",
-    email: "enquiries@anmol.qa",
-    description: "Premium Halal Meats of Qatar",
+  "anmol-kanodia": {
+    // 1. URL ka path badalne ke liye is key ko badlein (e.g., website.com/anmol-kanodia)
+    id: "anmol-kanodia", // Isko upar ki key ke sath hamesha match rakhin taaki dynamic route load ho sake
+    name: "Anmol Kanodia", // Short/internal brand name
+    displayName: "Anmol Kanodia", // Frontend par page heading aur title ke liye display name
+    email: "enquiries@anmol.qa", // Contact ke liye email address
+    description: "Premium Halal Meats of Qatar", // Subheading/description text
     tagline:
-      "anmol, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
-    phone: "+974 4000 5678",
-    whatsapp: "https://wa.me/97450005678?text=Hello%20anmol%2C%20I%27d%20like%20to%20place%20an%20order.",
+      "Anmol Kanodia, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.", // Brand page introduction tagline
+    phone: "+974 4000 5678", // Dynamic telephone contact number
+    whatsapp: "https://wa.me/97450005678?text=Hello%20Anmol%20Kanodia%2C%20I%27d%20like%20to%20place%20an%20order.", // Direct Whatsapp order redirect URL
   },
 };
 
