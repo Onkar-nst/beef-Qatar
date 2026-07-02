@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import BeefCutsHero from "../../components/ui/BeefCutsHeroV2";
-import BeefCutsHeroCentered from "../../components/ui/BeefCutsHeroCenteredV2";
-import VanishText from "../../components/ui/VanishText";
-import Navbar from "../../components/ui/NavbarV2";
+import BeefCutsHeroCentered from "./BeefCutsHeroCentered";
+import VanishText from "./VanishText";
+import Navbar from "./Navbar";
+import { Brand } from "@/lib/brands";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -28,7 +28,7 @@ function useReveal() {
   return ref;
 }
 
-export default function Home() {
+export default function LandingPage({ brand }: { brand: Brand }) {
   const ref = useReveal();
 
   // "From Farm to Door" mobile carousel, track which card is in view for the dots.
@@ -42,25 +42,7 @@ export default function Home() {
 
   return (
     <div ref={ref} className="min-h-screen bg-[#FAF6EF] font-[var(--font-sans)] text-[#241B16] overflow-x-hidden">
-      <Navbar />
-      
-
-
-      {/* ========================================= */}
-      {/* PRESENTATION BANNER FOR OPTION 1          */}
-      {/* ========================================= */}
-      {/* <div className="w-full bg-[#241B16] text-[#FAF6EF] text-center py-2 text-[10px] tracking-[0.3em] uppercase font-bold relative z-20">
-        Presentation: Hero Option 1 (Split Layout)
-      </div> */}
-
-      {/* <BeefCutsHero /> */}
-
-      {/* ========================================= */}
-      {/* PRESENTATION BANNER FOR OPTION 2          */}
-      {/* ========================================= */}
-      {/* <div className="w-full bg-[#8A1538] text-white text-center py-2 text-[10px] tracking-[0.3em] uppercase font-bold relative z-20">
-        Presentation: Hero Option 2 (Centered Layout)
-      </div> */}
+      <Navbar brand={brand} />
 
       {/* Hero + philosophy share ONE continuous pasture field that runs down to the marquee */}
       <div className="relative">
@@ -72,12 +54,12 @@ export default function Home() {
             draggable={false}
             className="absolute inset-x-0 bottom-0 w-full h-full object-cover object-bottom opacity-45"
           />
-          {/* Maroon brand wash, ties the pasture to the Anmol burgundy */}
+          {/* Maroon brand wash, ties the pasture to the brand burgundy */}
           <div
             aria-hidden="true"
             className="absolute inset-0 mix-blend-multiply bg-gradient-to-br from-[#8A1538]/35 via-[#9E2447]/22 to-[#6E1230]/45"
           />
-          {/* Soft gold glow keeps a warm Anmol accent */}
+          {/* Soft gold glow keeps a warm accent */}
           <div
             aria-hidden="true"
             className="absolute inset-0 mix-blend-soft-light bg-gradient-to-t from-[#C9A24B]/28 via-transparent to-[#C9A24B]/12"
@@ -94,7 +76,7 @@ export default function Home() {
 
       </div>
 
-      {/* THE ANMOL PROMISE, full-bleed maroon manifesto band */}
+      {/* THE PROMISE, full-bleed maroon manifesto band */}
       <section id="philosophy" className="relative z-10 overflow-hidden bg-[#8A1538] text-[#FAF6EF] scroll-mt-24">
         {/* giant faint Arabic watermark, sits beside the 3rd pillar on mobile, centered on the band from lg up */}
         <span aria-hidden className="pointer-events-none absolute -right-[4vw] top-[84%] -translate-y-1/2 select-none font-[var(--font-serif)] text-[34vw] leading-none text-white/[0.05] lg:top-1/2">
@@ -109,14 +91,14 @@ export default function Home() {
             {/* LEFT, manifesto quote */}
             <div>
               <span className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.35em] text-[#E0C074]">
-                The Anmol Promise
+                The {brand.displayName} Promise
               </span>
               <p className="mt-7 font-[var(--font-display)] text-[2rem] font-medium leading-[1.16] sm:text-[2.8rem] sm:leading-[1.12]">
                 One standard. One promise. From trusted farms to your table,{" "}
                 <span className="font-[var(--font-serif)] text-[#E0C074]">every cut is certified Halal.</span>
               </p>
               <p className="mt-8 max-w-xl text-[14.5px] leading-relaxed text-[#FAF6EF]/70">
-                Anmol brings Qatar a new standard in premium meat, 100% Halal certified beef
+                {brand.displayName} brings Qatar a new standard in premium meat, 100% Halal certified beef
                 and lamb, sourced from trusted farms, slaughtered strictly to Zabiha rites and
                 cut by master butchers here in Doha.
               </p>
@@ -157,7 +139,7 @@ export default function Home() {
             </h2>
             <div className="mt-6 max-w-xl space-y-4 font-[var(--font-serif)] text-[15px] leading-relaxed text-[#241B16]/70">
               <p>
-                <span className="font-semibold text-[#241B16]">Anmol</span> supplies 100% Halal certified beef
+                <span className="font-semibold text-[#241B16]">{brand.displayName}</span> supplies 100% Halal certified beef
                 and lamb to homes, hotels and restaurants across Qatar, sourced with care, cut with craft,
                 delivered with speed.
               </p>
@@ -174,7 +156,7 @@ export default function Home() {
             <div className="relative overflow-hidden rounded-sm shadow-[0_30px_60px_-30px_rgba(36,27,22,0.55)]">
               <img
                 src="/cowsection.jpg"
-                alt="Anmol premium Halal cattle"
+                alt={`${brand.displayName} premium Halal cattle`}
                 loading="lazy"
                 className="aspect-[4/5] w-full object-cover"
               />
@@ -266,7 +248,7 @@ export default function Home() {
           <div className="reveal hidden lg:flex flex-col items-center">
             <img
               src="/images/halal-seal.svg"
-              alt="Anmol, Certified Halal, Zabiha slaughtered"
+              alt={`${brand.displayName}, Certified Halal, Zabiha slaughtered`}
               loading="lazy"
               className="float-slow w-56 sm:w-64 lg:w-72 drop-shadow-[0_24px_40px_-20px_rgba(138,21,56,0.5)]"
             />
@@ -292,7 +274,7 @@ export default function Home() {
               </VanishText>
             </h3>
             <p className="max-w-xl font-[var(--font-serif)] text-[14px] leading-relaxed text-gray-600">
-              Every animal is hand-slaughtered to strict Zabiha rites, facing the Qiblah, with the name of Allah pronounced, under qualified Islamic supervision. Nothing leaves our facility without full Halal assurance. It is the first promise of the Anmol name, never an afterthought.
+              Every animal is hand-slaughtered to strict Zabiha rites, facing the Qiblah, with the name of Allah pronounced, under qualified Islamic supervision. Nothing leaves our facility without full Halal assurance. It is the first promise of the {brand.displayName} name, never an afterthought.
             </p>
 
             <div className="mt-9 grid gap-4 sm:grid-cols-2">
@@ -338,7 +320,7 @@ export default function Home() {
               </h2>
               <p className="mt-6 text-[14.5px] leading-relaxed text-[#FAF6EF]/70">
                 Marbling, the fine web of fat within the muscle, is the key to flavour, juiciness and aroma.
-                Every Anmol carcass is hand-assessed for marble score and selected against strict premium-grade
+                Every {brand.displayName} carcass is hand-assessed for marble score and selected against strict premium-grade
                 standards, then handled on an unbroken cold chain from our facility to your door.
               </p>
 
@@ -347,7 +329,7 @@ export default function Home() {
                 {[
                   { k: "Marble score", v: "Hand-assessed, every carcass" },
                   { k: "Grade", v: "Premium selection only" },
-                  { k: "Halal", v: "100% Zabiha certified" },
+                  { k: "Halal", v: `100% Zabiha certified` },
                   { k: "Cold chain", v: "Unbroken, farm to door" },
                 ].map((m) => (
                   <div key={m.k} className="flex items-center justify-between gap-6 py-4">
@@ -367,7 +349,7 @@ export default function Home() {
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover"
             />
-            <div aria-hidden className="absolute inset-0 hidden bg-gradient-to-r from-[#16100C] via-transparent to-transparent lg:block" />
+            <div aria-hidden className="absolute inset-0 hidden bg-gradient-to-t from-[#16100C] via-transparent to-transparent lg:block" />
             {/* Mobile, darken from every edge so the image melts into the section */}
             <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#16100C] via-[#16100C]/15 to-[#16100C]/55 lg:hidden" />
             <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-[#16100C]/70 via-transparent to-[#16100C]/70 lg:hidden" />
@@ -394,7 +376,7 @@ export default function Home() {
               img: "/images/feedlot-cattle.jpg",
               step: "Sourced",
               t: "Trusted partner farms",
-              d: "Cattle and lambs raised on open pasture and grain-finished for rich, even marbling. Only animals that meet our standard carry the Anmol name.",
+              d: `Cattle and lambs raised on open pasture and grain-finished for rich, even marbling. Only animals that meet our standard carry the ${brand.displayName} name.`,
             },
             {
               img: "/images/ribeye.jpg",
@@ -463,8 +445,8 @@ export default function Home() {
             <div className="mt-8 space-y-3">
               {[
                 { label: "Showroom & Counter", value: "Salwa Road, Doha, State of Qatar", icon: <MapPinIcon /> },
-                { label: "WhatsApp & Phone", value: "+974 4000 1234", href: "https://wa.me/97440001234", icon: <PhoneIcon /> },
-                { label: "Email", value: "enquiries@anmol.qa", href: "mailto:enquiries@anmol.qa", icon: <MailIcon /> },
+                { label: "WhatsApp & Phone", value: brand.phone || "+974 4000 1234", href: brand.whatsapp || "https://wa.me/97450001234", icon: <PhoneIcon /> },
+                { label: "Email", value: brand.email, href: `mailto:${brand.email}`, icon: <MailIcon /> },
                 { label: "Business Hours", value: "Sun–Thu · 8:00–20:00 AST", icon: <ClockIcon /> },
               ].map((c) => (
                 <div key={c.label} className="flex items-start gap-4 rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 transition-colors hover:border-[#C9A24B]/40">
@@ -511,23 +493,11 @@ export default function Home() {
 
           {/* RIGHT, contact form */}
           <div className="reveal">
-            <ContactForm />
+            <ContactForm brand={brand} />
           </div>
         </div>
       </section>
 
-    </div>
-  );
-}
-
-function Divider() {
-  return (
-    <div className="mx-auto mt-12 flex max-w-md items-center gap-3 text-[#8A1538]/70 reveal">
-      <div className="flex-1 h-px bg-gray-200" />
-      <svg width="40" height="10" viewBox="0 0 40 10" fill="none" className="text-[#8A1538]">
-        <path d="M0 5 Q5 0 10 5 T20 5 T30 5 T40 5" stroke="currentColor" fill="none" />
-      </svg>
-      <div className="flex-1 h-px bg-gray-200" />
     </div>
   );
 }
@@ -558,44 +528,16 @@ function MailIcon() {
   );
 }
 
-function CountUp({ to, suffix = "", duration = 1500 }: { to: number; suffix?: string; duration?: number }) {
-  const [val, setVal] = useState(0);
-  const ref = useRef<HTMLSpanElement | null>(null);
-  const started = useRef(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting && !started.current) {
-            started.current = true;
-            const start = performance.now();
-            const tick = (now: number) => {
-              const p = Math.min(1, (now - start) / duration);
-              const eased = 1 - Math.pow(1 - p, 3);
-              setVal(Math.round(eased * to));
-              if (p < 1) requestAnimationFrame(tick);
-            };
-            requestAnimationFrame(tick);
-            io.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.4 },
-    );
-    io.observe(el);
-    return () => io.disconnect();
-  }, [to, duration]);
+function ClockIcon() {
   return (
-    <span ref={ref}>
-      {val}
-      {suffix}
-    </span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 2" />
+    </svg>
   );
 }
 
-function ContactForm() {
+function ContactForm({ brand }: { brand: Brand }) {
   const [sent, setSent] = useState(false);
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -607,7 +549,7 @@ function ContactForm() {
     const message = String(f.get("message") || "");
     const subject = `${type}, ${name || "Website Enquiry"}`;
     const body = `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nEnquiry: ${type}\n\n${message}`;
-    window.location.href = `mailto:enquiries@anmol.qa?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:${brand.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSent(true);
   };
 
@@ -673,15 +615,3 @@ function ContactForm() {
     </form>
   );
 }
-
-function ClockIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="9" />
-      <path d="M12 7v5l3 2" />
-    </svg>
-  );
-}
-
-/* Navbar now lives in components/ui/Navbar.tsx so it can be reused on
-   the cut-detail pages as well. */

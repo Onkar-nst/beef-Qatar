@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { Brand, getDefaultBrand } from "@/lib/brands";
 
 /* Saqr falcon mark, reused in the logo lockup. */
 function FalconMark({ className = "" }: { className?: string }) {
@@ -14,9 +15,10 @@ function FalconMark({ className = "" }: { className?: string }) {
   );
 }
 
-const WHATSAPP = "https://wa.me/97450001234?text=Hello%20Saqr%2C%20I%27d%20like%20to%20place%20an%20order.";
+export default function Navbar({ brand }: { brand?: Brand }) {
+  const activeBrand = brand || getDefaultBrand();
+  const whatsappUrl = activeBrand.whatsapp || "https://wa.me/97450001234?text=Hello%20Saqr%2C%20I%27d%20like%20to%20place%20an%20order.";
 
-export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   useEffect(() => {
@@ -42,8 +44,8 @@ export default function Navbar() {
           <span className="flex items-center gap-2">
             <span className="text-[#FAF6EF]">✦</span> Certified Halal 
           </span>
-          <span className="text-[#FAF6EF]/85 tracking-[0.3em]"> · Premium Meats of Qatar</span>
-          <span>Delivery across Qatar · +974 4000 1234</span>
+          <span className="text-[#FAF6EF]/85 tracking-[0.3em]"> · {activeBrand.description}</span>
+          <span>Delivery across Qatar · {activeBrand.phone || "+974 4000 1234"}</span>
         </div>
       </div>
 
@@ -63,8 +65,8 @@ export default function Navbar() {
               <FalconMark className="h-7 w-7" />
             </span>
             <span className="flex flex-col leading-none">
-              <span className="font-[var(--font-display)] text-[1.6rem] font-bold tracking-[0.16em] text-[#8A1538]">
-                SAQR
+              <span className="font-[var(--font-display)] text-[1.6rem] font-bold tracking-[0.16em] text-[#8A1538] uppercase">
+                {activeBrand.displayName}
               </span>
             </span>
           </Link>
@@ -85,7 +87,7 @@ export default function Navbar() {
           {/* RIGHT, WhatsApp CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href={WHATSAPP}
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full bg-[#8A1538] px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] text-[#FAF6EF] transition-colors hover:bg-[#6E0F2C]"
@@ -130,7 +132,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href={WHATSAPP}
+            href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-[#8A1538] px-5 py-3 text-[11px] font-bold tracking-[0.16em] text-[#FAF6EF]"

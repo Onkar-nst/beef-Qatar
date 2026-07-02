@@ -137,6 +137,32 @@ export function allSteakSlugs(): string[] {
   return slugs;
 }
 
+/* ---- SIMPLE SLUG HELPERS FOR /{slug} ROUTES ---- */
+/** Build a simple slug from a steak name (e.g. "COWBOY STEAK" → "cowboy-steak") */
+export const simpleSlug = (name: string) =>
+  slugify(name);
+
+/** Get steak item by simple slug (only valid items from PRIMALS list) */
+export function getItemBySlug(slug: string): { primal: Primal; steak: Steak } | null {
+  for (const primal of Object.values(PRIMALS)) {
+    for (const steak of primal.items) {
+      if (simpleSlug(steak.name) === slug) return { primal, steak };
+    }
+  }
+  return null;
+}
+
+/** Get all simple slugs for all steaks */
+export function getAllSimpleSlugs(): string[] {
+  const slugs: string[] = [];
+  for (const primal of Object.values(PRIMALS)) {
+    for (const steak of primal.items) {
+      slugs.push(simpleSlug(steak.name));
+    }
+  }
+  return slugs;
+}
+
 /* ---- Cow diagram geometry (viewBox 0 0 1017 619) for the mini map ---- */
 export const COW_VIEWBOX = "0 0 1017 619";
 

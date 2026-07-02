@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Lora, Inter } from "next/font/google";
 import "./globals.css";
+import { BRANDS } from "@/lib/brands";
 
 // Display, premium editorial serif (replaces the old condensed sans)
 const fraunces = Fraunces({
@@ -23,19 +24,20 @@ const inter = Inter({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+// Get default brand (test) for root layout metadata
+const defaultBrand = BRANDS.test;
+
 export const metadata: Metadata = {
-  title: "Saqr, Premium Halal Meats of Qatar",
-  description:
-    "Saqr, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+  title: `${defaultBrand.displayName} | ${defaultBrand.description}`,
+  description: defaultBrand.tagline,
   icons: {
     icon: "/images/saqr-emblem.svg",
     shortcut: "/images/saqr-emblem.svg",
     apple: "/images/saqr-emblem.svg",
   },
   openGraph: {
-    title: "Saqr, Premium Halal Meats",
-    description:
-      "Premium, 100% Halal certified beef and lamb for Qatar, source to table.",
+    title: `${defaultBrand.displayName} | ${defaultBrand.description}`,
+    description: defaultBrand.tagline,
     type: "website",
   },
 };
