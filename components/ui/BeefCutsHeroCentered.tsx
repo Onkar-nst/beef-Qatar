@@ -280,7 +280,7 @@ export default function BeefCutsHeroCentered() {
           <div className="relative w-full flex items-center justify-center order-2 lg:order-1">
             {/* Circular backdrop — centered behind the cow, aligned with the logo */}
             <div
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 aspect-square w-[340px] rounded-full bg-[#EFE6D6]
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 aspect-square w-[280px] rounded-full bg-[#EFE6D6]
                          sm:w-[460px] lg:w-[540px]"
               style={{ transition: "all 0.6s cubic-bezier(.4,0,.2,1)" }}
             />
