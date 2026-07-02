@@ -31,6 +31,15 @@ function useReveal() {
 export default function Home() {
   const ref = useReveal();
 
+  // "From Farm to Door" mobile carousel — track which card is in view for the dots.
+  const farmScrollRef = useRef<HTMLDivElement | null>(null);
+  const [farmIdx, setFarmIdx] = useState(0);
+  const onFarmScroll = () => {
+    const el = farmScrollRef.current;
+    if (!el) return;
+    setFarmIdx(Math.round(el.scrollLeft / (el.scrollWidth / 5)));
+  };
+
   return (
     <div ref={ref} className="min-h-screen bg-[#FAF6EF] font-[var(--font-sans)] text-[#241B16] overflow-x-hidden">
       <Navbar />
@@ -87,8 +96,8 @@ export default function Home() {
 
       {/* THE SAQR PROMISE — full-bleed maroon manifesto band */}
       <section id="philosophy" className="relative z-10 overflow-hidden bg-[#8A1538] text-[#FAF6EF] scroll-mt-24">
-        {/* giant faint Arabic watermark */}
-        <span aria-hidden className="pointer-events-none absolute -right-[4vw] top-1/2 -translate-y-1/2 select-none font-[var(--font-serif)] text-[34vw] leading-none text-white/[0.05]">
+        {/* giant faint Arabic watermark — sits beside the 3rd pillar on mobile, centered on the band from lg up */}
+        <span aria-hidden className="pointer-events-none absolute -right-[4vw] top-[84%] -translate-y-1/2 select-none font-[var(--font-serif)] text-[34vw] leading-none text-white/[0.05] lg:top-1/2">
           وعد
         </span>
         {/* thin gold hairlines top + bottom */}
@@ -188,12 +197,10 @@ export default function Home() {
             <span className="font-[var(--font-serif)] text-sm text-[#C9A24B]">من المزرعة إلى بابك</span>
           </div>
           <div className="relative">
-            {/* continuous baseline that the numbers sit on (lg+) */}
             <div
-              aria-hidden
-              className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-[#8A1538]/20 via-[#C9A24B]/40 to-[#8A1538]/20 lg:block"
-            />
-            <div className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-5">
+              ref={farmScrollRef}
+              onScroll={onFarmScroll}
+              className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-pl-8 px-8 pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-5">
               {[
                 { t: "Trusted Farms", d: "Cattle & lamb raised on pasture by long-standing partner farms.", ar: "مزارع موثوقة" },
                 { t: "Halal Slaughter", d: "Certified Zabiha process, supervised at every step.", ar: "ذبح حلال" },
@@ -227,6 +234,18 @@ export default function Home() {
                 </div>
               ))}
             </div>
+
+            {/* Dots — hint that more cards sit to the right (mobile only) */}
+            <div className="mt-5 flex justify-center gap-2 sm:hidden">
+              {[0, 1, 2, 3, 4].map((d) => (
+                <span
+                  key={d}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${
+                    d === farmIdx ? "w-5 bg-[#8A1538]" : "w-1.5 bg-[#8A1538]/25"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -243,8 +262,8 @@ export default function Home() {
           }}
         />
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 sm:py-24 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-          {/* LEFT — certification seal */}
-          <div className="reveal flex flex-col items-center">
+          {/* LEFT — certification seal (desktop only) */}
+          <div className="reveal hidden lg:flex flex-col items-center">
             <img
               src="/images/halal-seal.svg"
               alt="Saqr — Certified Halal, Zabiha slaughtered"
@@ -255,12 +274,19 @@ export default function Home() {
           </div>
 
           {/* RIGHT — copy + assurance grid */}
-          <div className="reveal">
-            <span className="mb-5 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.3em] text-[#8A1538]">
+          <div className="reveal relative">
+            {/* Mobile watermark — small seal behind the title */}
+            <img
+              src="/images/halal-seal.svg"
+              alt=""
+              aria-hidden="true"
+              className="pointer-events-none absolute -top-2 right-1 w-28 opacity-[0.13] select-none lg:hidden"
+            />
+            <span className="relative mb-5 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.3em] text-[#8A1538]">
               <span className="h-px w-6 bg-[#8A1538]/60" />
               Halal Assurance · ضمان حلال
             </span>
-            <h3 className="font-[var(--font-display)] text-3xl md:text-4xl font-bold uppercase tracking-wide leading-[1.1] mb-6">
+            <h3 className="relative font-[var(--font-display)] text-3xl md:text-4xl font-bold uppercase tracking-wide leading-[1.1] mb-6">
               <VanishText>
                 Certified Halal, <span className="text-[#8A1538]">Without Compromise</span>
               </VanishText>
@@ -342,7 +368,9 @@ export default function Home() {
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div aria-hidden className="absolute inset-0 hidden bg-gradient-to-r from-[#16100C] via-transparent to-transparent lg:block" />
-            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#16100C]/85 to-transparent lg:hidden" />
+            {/* Mobile — darken from every edge so the image melts into the section */}
+            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#16100C] via-[#16100C]/15 to-[#16100C]/55 lg:hidden" />
+            <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-[#16100C]/70 via-transparent to-[#16100C]/70 lg:hidden" />
           </div>
         </div>
       </section>

@@ -115,6 +115,9 @@ export default function Navbar() {
             </div>
           </button>
         </div>
+
+        {/* slim divider between the navbar and hero (mobile only) */}
+        <div aria-hidden className="md:hidden h-px w-full bg-[#8A1538]/25" />
       </div>
 
       {/* MOBILE MENU */}
