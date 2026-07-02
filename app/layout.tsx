@@ -27,8 +27,11 @@ const inter = Inter({
 // Get default brand (test) for root layout metadata
 const defaultBrand = BRANDS.test;
 
+const capitalize = (text: string) =>
+  text.charAt(0).toUpperCase() + text.slice(1);
+
 export const metadata: Metadata = {
-  title: `${defaultBrand.displayName} | ${defaultBrand.description}`,
+  title: `${capitalize(defaultBrand.displayName)} | ${defaultBrand.description}`,
   description: defaultBrand.tagline,
   icons: {
     icon: "/images/saqr-emblem.svg",
@@ -36,12 +39,11 @@ export const metadata: Metadata = {
     apple: "/images/saqr-emblem.svg",
   },
   openGraph: {
-    title: `${defaultBrand.displayName} | ${defaultBrand.description}`,
+    title: `${capitalize(defaultBrand.displayName)} | ${defaultBrand.description}`,
     description: defaultBrand.tagline,
     type: "website",
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{

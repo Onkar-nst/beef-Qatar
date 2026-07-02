@@ -98,7 +98,7 @@ export default function LandingPage({ brand }: { brand: Brand }) {
                 <span className="font-[var(--font-serif)] text-[#E0C074]">every cut is certified Halal.</span>
               </p>
               <p className="mt-8 max-w-xl text-[14.5px] leading-relaxed text-[#FAF6EF]/70">
-                {brand.displayName} brings Qatar a new standard in premium meat, 100% Halal certified beef
+               {brand.displayName.replace(/\b\w/g, (char) => char.toUpperCase())} brings Qatar a new standard in premium meat, 100% Halal certified beef
                 and lamb, sourced from trusted farms, slaughtered strictly to Zabiha rites and
                 cut by master butchers here in Doha.
               </p>
@@ -139,7 +139,7 @@ export default function LandingPage({ brand }: { brand: Brand }) {
             </h2>
             <div className="mt-6 max-w-xl space-y-4 font-[var(--font-serif)] text-[15px] leading-relaxed text-[#241B16]/70">
               <p>
-                <span className="font-semibold text-[#241B16]">{brand.displayName}</span> supplies 100% Halal certified beef
+                <span className="font-semibold text-[#241B16]">{brand.displayName.replace(/\b\w/g, (char) => char.toUpperCase())}</span> supplies 100% Halal certified beef
                 and lamb to homes, hotels and restaurants across Qatar, sourced with care, cut with craft,
                 delivered with speed.
               </p>
@@ -274,7 +274,7 @@ export default function LandingPage({ brand }: { brand: Brand }) {
               </VanishText>
             </h3>
             <p className="max-w-xl font-[var(--font-serif)] text-[14px] leading-relaxed text-gray-600">
-              Every animal is hand-slaughtered to strict Zabiha rites, facing the Qiblah, with the name of Allah pronounced, under qualified Islamic supervision. Nothing leaves our facility without full Halal assurance. It is the first promise of the {brand.displayName} name, never an afterthought.
+              Every animal is hand-slaughtered to strict Zabiha rites, facing the Qiblah, with the name of Allah pronounced, under qualified Islamic supervision. Nothing leaves our facility without full Halal assurance. It is the first promise of the {brand.displayName.replace(/\b\w/g, (char) => char.toUpperCase())} name, never an afterthought.
             </p>
 
             <div className="mt-9 grid gap-4 sm:grid-cols-2">
@@ -320,7 +320,7 @@ export default function LandingPage({ brand }: { brand: Brand }) {
               </h2>
               <p className="mt-6 text-[14.5px] leading-relaxed text-[#FAF6EF]/70">
                 Marbling, the fine web of fat within the muscle, is the key to flavour, juiciness and aroma.
-                Every {brand.displayName} carcass is hand-assessed for marble score and selected against strict premium-grade
+                Every {brand.displayName.replace(/\b\w/g, (char) => char.toUpperCase())} carcass is hand-assessed for marble score and selected against strict premium-grade
                 standards, then handled on an unbroken cold chain from our facility to your door.
               </p>
 
@@ -376,7 +376,7 @@ export default function LandingPage({ brand }: { brand: Brand }) {
               img: "/images/feedlot-cattle.jpg",
               step: "Sourced",
               t: "Trusted partner farms",
-              d: `Cattle and lambs raised on open pasture and grain-finished for rich, even marbling. Only animals that meet our standard carry the ${brand.displayName} name.`,
+              d: `Cattle and lambs raised on open pasture and grain-finished for rich, even marbling. Only animals that meet our standard carry the ${brand.displayName.replace(/\b\w/g, (char) => char.toUpperCase())} name.`,
             },
             {
               img: "/images/ribeye.jpg",
