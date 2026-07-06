@@ -55,6 +55,17 @@ export const BRANDS: Record<string, Brand> = {
     phone: "+974 4000 5678", // Dynamic telephone contact number
     whatsapp: "https://wa.me/97450005678?text=Hello%20Anmol%20Kanodia%2C%20I%27d%20like%20to%20place%20an%20order.", // Direct Whatsapp order redirect URL
   },
+  "twinkle-shah": {
+    id: "twinkle-shah",
+    name: "Twinkle Shah",
+    displayName: "Twinkle Shah",
+    email: "enquiries@twinkleshah.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "Twinkle Shah, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20Twinkle%20Shah%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
 };
 
 /**
