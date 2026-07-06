@@ -57,8 +57,8 @@ export const BRANDS: Record<string, Brand> = {
   },
   "twinkle-shah": {
     id: "twinkle-shah",
-    name: "",
-    displayName: "Twinkle Shah ",
+    name: "Twinkle Shah",
+    displayName: "Twinkle Shah onkar pvt limited",
     email: "enquiries@twinkleshah.qa",
     description: "Premium Halal Meats of Qatar",
     tagline:

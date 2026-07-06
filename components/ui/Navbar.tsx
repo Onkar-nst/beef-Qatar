@@ -60,19 +60,19 @@ export default function Navbar({ brand }: { brand?: Brand }) {
       >
         <div className="mx-auto flex items-center justify-between px-6 h-20 max-w-7xl gap-4">
           {/* LEFT, logo lockup */}
-          <Link href="/" className="group flex items-center gap-3">
-            <span className="grid h-12 w-12 place-items-center rounded-full bg-[#FAF6EF] ring-1 ring-[#8A1538]/20 shadow-sm transition-transform duration-300 group-hover:scale-105">
+          <Link href="/" className="group flex items-center gap-3 min-w-0">
+            <span className="grid h-12 w-12 place-items-center rounded-full bg-[#FAF6EF] ring-1 ring-[#8A1538]/20 shadow-sm transition-transform duration-300 group-hover:scale-105 flex-shrink-0">
               <FalconMark className="h-7 w-7" />
             </span>
-            <span className="flex flex-col leading-none">
-              <span className="font-[var(--font-display)] text-[1.6rem] font-bold tracking-[0.16em] text-[#8A1538] uppercase">
+            <span className="flex flex-col leading-tight min-w-0">
+              <span className="font-[var(--font-display)] text-[1.3rem] sm:text-[1.5rem] lg:text-[1.6rem] font-bold tracking-[0.16em] text-[#8A1538] uppercase break-words line-clamp-2">
                 {activeBrand.displayName}
               </span>
             </span>
           </Link>
 
           {/* CENTER, links */}
-          <nav className="hidden lg:flex items-center gap-9 text-[11px] uppercase tracking-[0.22em] text-[#241B16] font-semibold">
+          <nav className="hidden lg:flex items-center gap-9 text-[11px] uppercase tracking-[0.22em] text-[#241B16] font-semibold flex-shrink-0 whitespace-nowrap">
             {links.map((l) => (
               <Link
                 key={l.href}
@@ -85,7 +85,7 @@ export default function Navbar({ brand }: { brand?: Brand }) {
           </nav>
 
           {/* RIGHT, WhatsApp CTA */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-3 flex-shrink-0">
             <a
               href={whatsappUrl}
               target="_blank"
