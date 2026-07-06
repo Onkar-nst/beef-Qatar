@@ -121,6 +121,83 @@ export const BRANDS: Record<string, Brand> = {
     phone: "+974 4000 1234",
     whatsapp: "https://wa.me/97450001234?text=Hello%20Saboor%20Company%2C%20I%27d%20like%20to%20place%20an%20order.",
   },
+  "pure-meat-trading": {
+    id: "pure-meat-trading",
+    name: "Pure Meat Trading",
+    displayName: "Pure Meat Trading",
+    email: "enquiries@puremeattrading.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "Pure Meat Trading, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20Pure%20Meat%20Trading%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
+  "al-safa-meat-center": {
+    id: "al-safa-meat-center",
+    name: "Al Safa Meat Center",
+    displayName: "Al Safa Meat Center",
+    email: "enquiries@alsafameatcenter.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "Al Safa Meat Center, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20Al%20Safa%20Meat%20Center%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
+  "prime-needs": {
+    id: "prime-needs",
+    name: "Prime Needs",
+    displayName: "Prime Needs",
+    email: "enquiries@primeneeds.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "Prime Needs, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20Prime%20Needs%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
+  "white-mountain-meat-trading": {
+    id: "white-mountain-meat-trading",
+    name: "White Mountain Meat Trading",
+    displayName: "White Mountain Meat Trading",
+    email: "enquiries@whitemountainmeattrading.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "White Mountain Meat Trading, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20White%20Mountain%20Meat%20Trading%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
+  "alanaam-factory": {
+    id: "alanaam-factory",
+    name: "Alanaam Factory",
+    displayName: "Alanaam Factory",
+    email: "enquiries@alanaamfactory.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "Alanaam Factory, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20Alanaam%20Factory%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
+  "al-rafiq-butchery": {
+    id: "al-rafiq-butchery",
+    name: "Al-Rafiq Butchery",
+    displayName: "Al-Rafiq Butchery",
+    email: "enquiries@alrafikbutchery.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "Al-Rafiq Butchery, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20Al-Rafiq%20Butchery%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
+  "widam": {
+    id: "widam",
+    name: "Widam",
+    displayName: "Widam",
+    email: "enquiries@widam.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "Widam, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20Widam%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
 };
 
 /**
