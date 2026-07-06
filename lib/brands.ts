@@ -77,6 +77,50 @@ export const BRANDS: Record<string, Brand> = {
     phone: "+974 4000 1234",
     whatsapp: "https://wa.me/97450001234?text=Hello%20Qatar%20Meat%20Production%2C%20I%27d%20like%20to%20place%20an%20order.",
   },
+  "fresh-meat-factory": {
+    id: "fresh-meat-factory",
+    name: "Fresh Meat Factory",
+    displayName: "Fresh Meat Factory",
+    email: "enquiries@freshmeatfactory.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "Fresh Meat Factory, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20Fresh%20Meat%20Factory%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
+  "al-qusaimi-meat-co": {
+    id: "al-qusaimi-meat-co",
+    name: "Al Qusaimi Meat Co.",
+    displayName: "Al Qusaimi Meat Co.",
+    email: "enquiries@alqusaimimeatco.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "Al Qusaimi Meat Co., premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20Al%20Qusaimi%20Meat%20Co%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
+  "al-touqa-meat-company": {
+    id: "al-touqa-meat-company",
+    name: "Al Touqa Meat Company",
+    displayName: "Al Touqa Meat Company",
+    email: "enquiries@altouqameatcompany.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "Al Touqa Meat Company, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20Al%20Touqa%20Meat%20Company%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
+  "saboor-company": {
+    id: "saboor-company",
+    name: "Saboor Company",
+    displayName: "Saboor Company",
+    email: "enquiries@saboorcompany.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "Saboor Company, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20Saboor%20Company%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
 };
 
 /**
