@@ -63,14 +63,14 @@ export default function Navbar() {
               <FalconMark className="h-7 w-7" />
             </span>
             <span className="flex flex-col leading-tight min-w-0">
-              <span className="font-[var(--font-display)] text-[1.3rem] sm:text-[1.5rem] lg:text-[1.6rem] font-bold tracking-[0.16em] text-[#8A1538] uppercase break-words line-clamp-2">
+              <span className="font-[var(--font-display)] text-[0.95rem] sm:text-[1.05rem] lg:text-[1.15rem] font-bold tracking-[0.16em] text-[#8A1538] uppercase break-words line-clamp-2">
                 ANMOL
               </span>
             </span>
           </Link>
 
           {/* CENTER, links */}
-          <nav className="hidden lg:flex items-center gap-9 text-[11px] uppercase tracking-[0.22em] text-[#241B16] font-semibold flex-shrink-0 whitespace-nowrap">
+          <nav className="hidden lg:flex items-center gap-6 text-[11px] uppercase tracking-[0.22em] text-[#241B16] font-semibold flex-shrink-0 whitespace-nowrap">
             {links.map((l) => (
               <Link
                 key={l.href}
