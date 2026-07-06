@@ -66,6 +66,17 @@ export const BRANDS: Record<string, Brand> = {
     phone: "+974 4000 1234",
     whatsapp: "https://wa.me/97450001234?text=Hello%20Twinkle%20Shah%2C%20I%27d%20like%20to%20place%20an%20order.",
   },
+  "qatar-meat-production": {
+    id: "qatar-meat-production",
+    name: "Qatar Meat Production",
+    displayName: "Qatar Meat Production",
+    email: "enquiries@qatarmeatproduction.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "Qatar Meat Production, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20Qatar%20Meat%20Production%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
 };
 
 /**
