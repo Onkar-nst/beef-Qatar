@@ -198,6 +198,83 @@ export const BRANDS: Record<string, Brand> = {
     phone: "+974 4000 1234",
     whatsapp: "https://wa.me/97450001234?text=Hello%20Widam%2C%20I%27d%20like%20to%20place%20an%20order.",
   },
+  "butcher-shop-grill": {
+    id: "butcher-shop-grill",
+    name: "Butcher Shop Grill",
+    displayName: "Butcher Shop Grill",
+    email: "enquiries@butchershopgrill.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "Butcher Shop Grill, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20Butcher%20Shop%20Grill%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
+  "al-tahaluf-food": {
+    id: "al-tahaluf-food",
+    name: "Al-Tahaluf Food",
+    displayName: "Al-Tahaluf Food",
+    email: "enquiries@altahaluffood.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "Al-Tahaluf Food, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20Al-Tahaluf%20Food%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
+  "dnfi-factory": {
+    id: "dnfi-factory",
+    name: "DNFI Factory",
+    displayName: "DNFI Factory",
+    email: "enquiries@dnfifactory.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "DNFI Factory, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20DNFI%20Factory%2C%20I%27d%20like%20to%20place%20an%20order.",
+  }, 
+  "ankara-butchery": {
+    id: "ankara-butchery",
+    name: "Ankara Butchery",
+    displayName: "Ankara Butchery",
+    email: "enquiries@ankarabutchery.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "Ankara Butchery, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20Ankara%20Butchery%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
+  "al-sanabel-meat": {
+    id: "al-sanabel-meat",
+    name: "Al-Sanabel Meat",
+    displayName: "Al-Sanabel Meat",
+    email: "enquiries@alsanabelmeat.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "Al-Sanabel Meat, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20Al-Sanabel%20Meat%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
+  "the-premium-butcher": {
+    id: "the-premium-butcher",
+    name: "The Premium Butcher",
+    displayName: "The Premium Butcher",
+    email: "enquiries@thepremiumbutcher.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "The Premium Butcher, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20The%20Premium%20Butcher%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
+  "al-safi-meat": {
+    id: "al-safi-meat",
+    name: "Al-Safi Meat",
+    displayName: "Al-Safi Meat",
+    email: "enquiries@alsafimeat.qa",
+    description: "Premium Halal Meats of Qatar",
+    tagline:
+      "Al-Safi Meat, premium, 100% Halal certified beef and lamb, expertly cut and delivered across Qatar. Source to table, with a single standard of excellence.",
+    phone: "+974 4000 1234",
+    whatsapp: "https://wa.me/97450001234?text=Hello%20Al-Safi%20Meat%2C%20I%27d%20like%20to%20place%20an%20order.",
+  },
 };
 
 /**
